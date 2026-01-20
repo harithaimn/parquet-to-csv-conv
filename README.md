@@ -1,6 +1,9 @@
 # Parquet → CSV Converter (Streamlit)
 
-A simple, password-protected Streamlit app for converting Parquet files to CSV, fully in-memory, with data preview and download support.
+A simple Streamlit app for converting Parquet files to CSV, fully in-memory, with data preview and download support.
+
+🌐 **Live App:**
+👉 https://parquet-to-csv-conv.streamlit.app/
 
 Designed for:
 
@@ -30,6 +33,7 @@ No files are written to disk. No persistence. Stateless by design.
 - tqdm — reusable progress abstraction (non-UI)  
 
 ## Project Structure
+```
 parquet_to_csv_app/
 │
 ├── app.py                 # Streamlit app (auth, UI, preview)
@@ -44,31 +48,41 @@ parquet_to_csv_app/
 ├── requirements.txt
 ├── README.md
 └── .gitignore
+```
 
 ## Setup
-1️⃣ Create virtual environment  
+1️⃣ **Create virtual environment**  
+```bash
 python -m venv .venv  
 source .venv/bin/activate   # Linux / macOS  
-# .venv\Scripts\activate    # Windows
+.venv\Scripts\activate    # Windows
+```
 
-2️⃣ Install dependencies  
+2️⃣ **Install dependencies**
+```bash  
 pip install -r requirements.txt
+```
 
 ## Configuration
-.streamlit/secrets.toml
+
+`.streamlit/secrets.toml`
 
 Create this file locally (do not commit it):
 
+```toml
 APP_PASSWORD = "replace-with-a-strong-password"
+```
 
-.streamlit/config.toml
+`.streamlit/config.toml`
 
 Controls the dark theme (already versioned).
 
 ## Running the App
+```bash
 streamlit run app.py
+```
 
-Open the URL shown in your terminal (usually http://localhost:8501).
+Open the URL shown in your terminal (usually `http://localhost:8501`).
 
 ## Usage Flow
 
@@ -77,36 +91,6 @@ Open the URL shown in your terminal (usually http://localhost:8501).
 3. Preview schema and sample rows  
 4. Click Convert to CSV  
 5. Download the generated CSV
-
-## Design Notes
-
-- No disk writes  
-- All conversion happens in memory using BytesIO.
-
-- Schema-safe conversion  
-- Uses PyArrow directly (no pandas for conversion).
-
-- Progress handling  
-- Conversion progress is exposed via a callback, making the core logic UI-agnostic.
-
-- Stateless  
-- Suitable for Streamlit Cloud, containers, or internal deployment.
-
-## Limitations / Notes
-
-CSV is a lossy format compared to Parquet:
-
-- No schema metadata  
-- Larger file size  
-- Datatypes may degrade (timestamps, decimals)
-
-Intended for:
-
-- Manual inspection  
-- Stakeholder export  
-- Legacy system compatibility
-
-Not intended as a replacement for Parquet in pipelines.
 
 ## Possible Extensions
 
@@ -120,4 +104,4 @@ Not intended as a replacement for Parquet in pipelines.
 ## License
 
 Internal / utility use.  
-Add a license if you plan to distribute externally.
+Copyrighted by Harith Aiman | January 2026.
