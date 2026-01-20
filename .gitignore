@@ -1,0 +1,13 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Streamlit secrets ONLY
+.streamlit/secrets.toml
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+#.gitignore

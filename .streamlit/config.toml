@@ -1,0 +1,11 @@
+[theme]
+base = "dark"
+
+# Core colors
+primaryColor = "#4F8DF7"        # calm blue (buttons, sliders)
+backgroundColor = "#0E1117"     # deep dark (main background)
+secondaryBackgroundColor = "#161B22"  # panels / sidebar
+textColor = "#E6EDF3"           # soft white (no eye burn)
+
+# Typography
+font = "sans serif"
