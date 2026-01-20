@@ -2,7 +2,7 @@
 
 A simple Streamlit app for converting Parquet files to CSV, fully in-memory, with data preview and download support.
 
-🌐 **Live App:**
+🌐 **Live App:**  
 👉 https://parquet-to-csv-conv.streamlit.app/
 
 Designed for:
