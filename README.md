@@ -1,5 +1,7 @@
 # Parquet → CSV Converter (Streamlit)
 
+[![wakatime](https://wakatime.com/badge/user/0a66d826-1f13-4522-86db-bb1705905f0d/project/0d523dd3-6e16-43b9-9955-eaafa003871f.svg)](https://wakatime.com/badge/user/0a66d826-1f13-4522-86db-bb1705905f0d/project/0d523dd3-6e16-43b9-9955-eaafa003871f)
+
 A simple Streamlit app for converting Parquet files to CSV, fully in-memory, with data preview and download support.
 
 🌐 **Live App:**  
